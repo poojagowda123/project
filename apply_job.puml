@@ -1,0 +1,25 @@
+@startuml
+actor User
+participant Browser
+participant "apply_job.php" as ApplyScript
+participant "MySQL Database" as DB
+participant "Notification System" as Notify
+participant "Job Poster" as Poster
+
+User -> Browser : Open Job List Page
+User -> Browser : Click 'Apply' Button
+Browser -> ApplyScript : POST apply (JobID, UserID)
+ApplyScript -> DB : Check if already applied
+
+alt Not Already Applied
+    ApplyScript -> DB : Insert application record
+    ApplyScript -> Notify : Send notification to job poster
+    Notify -> DB : Get job poster contact info
+    Notify -> Poster : Send Email/SMS/Alert
+    ApplyScript -> Browser : Return success message
+else Already Applied
+    ApplyScript -> Browser : Return error (Already applied)
+end
+
+Browser -> User : Show success/error message
+@enduml

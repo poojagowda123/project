@@ -1,0 +1,69 @@
+/* Base Styling */
+body {
+    background-color: #000;
+    color: #0ff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Boxes */
+.form-box, .dashboard-box, .task-list-box {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0ff;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input, textarea, select, button {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input, textarea {
+    background-color: #222;
+    color: #0ff;
+}
+
+button {
+    background-color: #0ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00cccc;
+}
+
+/* Task Cards */
+.task-card {
+    background: #111;
+    border: 1px solid #0ff;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 0 0 8px #0ff4;
+}
+
+a {
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+}
